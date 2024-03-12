@@ -1,0 +1,143 @@
+:root{
+    --dark: #061B2D;
+    --light: #F22E8A;
+    --aqua: #0CF2DB;
+    --blue1: #0CF2DB;
+    --blue2: #0C3559;
+}
+
+body{
+    background-image: linear-gradient(var(--blue2), var(--dark));
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    position: relative;
+    display: block;
+    align-items: center;
+    background-color: var(--light);
+    padding: 1rem;
+    margin: 10rem;
+    width: 50%;
+    border: none;
+    border-radius: 25px;
+    height: 65vh;
+}
+
+.container h1{
+    font-weight: 500;
+    text-align: center;
+    margin-bottom:0;
+}
+
+.wrapper {
+    align-items: center;
+}
+
+.wrapper .input-box .text{
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    height: 2rem;
+    font-weight: 300;
+}
+
+.wrapper .input-box input{
+    position: relative;
+    margin: 1.25rem 0;
+    text-align: center;
+    height: 1.25rem;
+    font-weight: 500;
+    width: 80%;
+}
+
+.pass-length .title{
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 500;
+}
+
+.wrapper .pass-indicator{
+    width: 90%;
+    height: 4px;
+    position: relative;
+    background: #dfdfdf;
+    margin: 0.75rem 1rem;
+    border-radius: 25px;
+}
+
+.pass-indicator::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+  }
+  .pass-indicator#weak::before{
+    width: 20%;
+    background: #E64A4A;
+  }
+  .pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+  }
+  .pass-indicator#strong::before{
+    width: 100%;
+    background: var(--aqua);
+  }
+
+  .wrapper .pass-length{
+    margin: 0.65rem;
+    text-align: center;
+  }
+  .pass-length .details{
+    display: block;
+    justify-content: space-between;
+  }
+  .pass-length input{
+    width: 100%;
+    height: 5px;
+    margin-bottom: 0.5rem;
+  }
+
+  .pass-length span{
+    display: block;
+    text-align: end;
+    margin-top: -20px;
+    font-weight: 300;
+  }
+
+.pass-settings .title{
+    margin-left: 2.5rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.pass-settings .options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.pass-settings .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+  }
+
+  .wrapper .generate-btn{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--dark);
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 0.94rem 0 1.3rem;
+  }
